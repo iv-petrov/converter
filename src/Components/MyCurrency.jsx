@@ -10,7 +10,7 @@ function MyCurrency(props) {
           <option value="11.16">CNY</option>
           <option value="1.00">RUB</option>
         </select>
-      </label> 
+      </label>
     </div>
   )
 }

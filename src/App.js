@@ -3,8 +3,8 @@ import { useState } from 'react';
 import MyCurrency from './Components/MyCurrency';
 
 function App() {
-  const [fromCurrency, setFrom] = useState(0); 
-  const [toCurrency, setTo] = useState(0);
+  const [fromCurrency, setFromCurrency] = useState("0");
+  const [toCurrency, setToCurrency] = useState("0");
   const [amount, setAmount] = useState(0.0);
   const [result, setResult] = useState(0.0);
 
@@ -31,12 +31,12 @@ function App() {
           <h1>Конвертер валют</h1>
         </header>
         <p> </p>
-        <MyCurrency label='Выберите валюту, из которой конвертируем' value={fromCurrency} change={(e) => setFrom(e.target.value)} />
+        <MyCurrency label='Выберите валюту, из которой конвертируем' value={fromCurrency} change={(e) => setFromCurrency(e.target.value)} />
         <p> </p>
-        <MyCurrency label='Выберите валюту, в которую конвертируем' value={toCurrency} change={(e) => setTo(e.target.value)} />
+        <MyCurrency label='Выберите валюту, в которую конвертируем' value={toCurrency} change={(e) => setToCurrency(e.target.value)} />
         <p> </p>
         <label>Введите количество исходной валюты:
-            <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
+          <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
         </label>
         <p> </p>
         <label>
